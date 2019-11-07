@@ -1,7 +1,7 @@
 const express = require('express');
 const route = express.Router();
 const ProductController = require('../../../interface_adapters/controllers/ProductController');
-import App from "../../../../../punk-beer-client/build/App";
+import App from "@lerna-node-react/product/dist/App";
 import React from "react";
 import { renderToString } from "react-dom/server";
 import hbs from "handlebars";
@@ -23,6 +23,7 @@ route.get('/', async (req, res) => {
   const reactComp = renderToString(<App products = {products} />);
   const htmlToSend = hbsTemplate({ reactele: reactComp });
   return res.send(htmlToSend);
+  // return res.send(theHtml)
 });
 
 route.get('/:id', async (req, res) => {
