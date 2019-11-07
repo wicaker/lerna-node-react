@@ -1,0 +1,12 @@
+{
+  "name": "fake-server-db",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "mock:api": "json-server --watch db.json --port 4000"
+  },
+  "devDependencies": {
+    "json-server": "^0.15.1"
+  }
+}
