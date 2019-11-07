@@ -9,3 +9,6 @@
 - /packages/product (`yarn install`, `yarn build`, and `yarn start`)
 
 just for fun :D (need more to learn)
+
+### Description
+- SSR with express.js as server to render `react pages`. In this example we just render `product` page
