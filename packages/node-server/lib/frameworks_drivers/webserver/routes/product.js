@@ -23,7 +23,6 @@ route.get('/', async (req, res) => {
   const reactComp = renderToString(<App products = {products} />);
   const htmlToSend = hbsTemplate({ reactele: reactComp });
   return res.send(htmlToSend);
-  // return res.send(theHtml)
 });
 
 route.get('/:id', async (req, res) => {
