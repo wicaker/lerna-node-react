@@ -1,4 +1,10 @@
 {
+  "scripts": {
+    "fake-db":"lerna run mock:api --scope=fake-server-db --stream",
+    "react-product-build":"lerna run build --scope=product",
+    "react-product-start":"lerna run start --scope=product --stream",
+    "node-server-start":"lerna --scope node-server run -- watch"
+  },
   "devDependencies": {
     "lerna": "^3.18.3"
   },

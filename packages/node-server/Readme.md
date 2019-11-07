@@ -1,0 +1,2 @@
+- Clean architecture, inspired by [Robert C. Martin](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
+- Project structure inspired by [nodejs_clean_arc](https://github.com/jbuget/nodejs-clean-architecture-app)
