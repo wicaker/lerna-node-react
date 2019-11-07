@@ -9,10 +9,11 @@ class Product extends React.Component {
     select: [1,2,3,4,5]
   }
 
-  async handleClickButton(){
-    await axios.get('/catch/test').then(res=>console.log(res)).catch(err => console.log(err))
+  async handleClickButton(e, id){
+    await axios.get(`/api/product/${id}`).then(res=>console.log(res)).catch(err => console.log(err))
   }
   render () {
+    this.setState.beer = this.props.beer;
     return (
       <div>
         <div>
@@ -22,8 +23,8 @@ class Product extends React.Component {
           <ImageProduct image={this.props.beer.image_url} name={this.props.beer.name} />
         </div>
         <Select array={this.state.select} />
-        <div onClick={this.handleClickButton}>
-          <ButtonC color="primary" name="Add Wishlist" />
+        <div onClick={(e)=> {this.handleClickButton(e, this.props.beer.id)}}>
+          <ButtonC color="primary" name="Details" />
         </div>
       </div>
     );

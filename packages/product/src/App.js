@@ -144,11 +144,8 @@ class App extends React.Component {
     }
     return (
       <Router history={history}>
-        <div>
-          <Link to="/product">Product</Link>
-        </div>
         <Switch>
-          <Route path="/product" component={Products} />
+          <Route path="/" component={Products} />
         </Switch>
       </Router>
     );
