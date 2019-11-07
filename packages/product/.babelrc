@@ -1,0 +1,17 @@
+{
+  "plugins": [
+      [
+          "@babel/plugin-proposal-class-properties",
+          {
+              "loose": true
+          }
+      ],
+      [
+          "css-modules-transform"
+      ]
+  ],
+  "presets": [
+      "@babel/preset-react",
+      "@babel/preset-env"
+  ]
+}
