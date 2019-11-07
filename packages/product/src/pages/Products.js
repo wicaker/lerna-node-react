@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import Product from '../product/Product';
-import axios from 'axios';
-// import '../components/Wishlist'
 import './index.css'
 import { connect } from "react-redux";
 import * as actionCreators from "../store/actions/productAction";

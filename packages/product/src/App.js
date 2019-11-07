@@ -136,7 +136,6 @@ class App extends React.Component {
   };
   render() {
     const history = createMemoryHistory();
-
     // store data to reducers
     store.dispatch(acceptProducts(this.state.products));
     if (this.props.data) {
@@ -144,8 +143,9 @@ class App extends React.Component {
     }
     return (
       <Router history={history}>
+        <Link to='product'>Product</Link>
         <Switch>
-          <Route path="/" component={Products} />
+          <Route path="/product" component={Products} />
         </Switch>
       </Router>
     );
