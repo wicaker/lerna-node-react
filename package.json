@@ -1,12 +1,16 @@
 {
   "scripts": {
-    "fake-db":"lerna run mock:api --scope=fake-server-db --stream",
-    "react-product-build":"lerna run build --scope=@lerna-node-react/product",
-    "react-product-start":"lerna run start --scope=@lerna-node-react/product --stream",
-    "node-server-start":"lerna run watch --scope=node-server --stream"
+    "fake-db": "lerna run mock:api --scope=fake-server-db --stream",
+    "react-product-build": "lerna run build --scope=@lerna-node-react/product",
+    "react-product-start": "lerna run start --scope=@lerna-node-react/product --stream",
+    "node-server-start": "lerna run watch --scope=node-server --stream"
   },
   "devDependencies": {
     "lerna": "^3.18.3"
   },
-  "name": "lerna-node-react"
+  "name": "lerna-node-react",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
 }
