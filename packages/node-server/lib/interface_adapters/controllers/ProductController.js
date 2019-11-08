@@ -1,4 +1,3 @@
-'use strict';
 
 // const SayHello = require('../../application_business_rules/use_cases/SayHello');
 const ListProducts = require('../../application_business_rules/use_cases/ListProducts');
@@ -6,17 +5,17 @@ const GetProduct = require('../../application_business_rules/use_cases/GetProduc
 const CreateProduct = require('../../application_business_rules/use_cases/CreateProduct');
 
 
-
 const ProductRepository = require('../../application_business_rules/repositories/ProductRepository');
 const ProductRepositoryInService = require('../storage/ProductRepositoryInService');
+
 const productRepository = new ProductRepository(new ProductRepositoryInService());
 
 module.exports = {
 
   async createProduct(request) {
-    const { name, image_url, description } = request.payload;
-    const product = await CreateProduct( name, image_url, description, { productRepository });
-   
+    const { name, imageUrlurl, description } = request.payload;
+    const product = await CreateProduct(name, imageUrlurl, description, { productRepository });
+
     // Output
     return product;
   },
@@ -31,7 +30,6 @@ module.exports = {
   },
 
   async getProduct(request) {
-
     // Input
     const productId = request.params.id;
 
@@ -40,7 +38,7 @@ module.exports = {
 
     // Output
     if (!product) {
-      return ({message:"product not found"});
+      return ({ message: 'product not found' });
     }
     // const userSerializer = new UserSerializer();
     // return userSerializer.serialize(user);

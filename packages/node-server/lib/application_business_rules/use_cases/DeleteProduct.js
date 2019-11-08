@@ -1,5 +1,2 @@
-'use strict';
 
-module.exports = (productId, { productRepository }) => {
-  return productRepository.remove(productId);
-};
+module.exports = (productId, { productRepository }) => productRepository.remove(productId);

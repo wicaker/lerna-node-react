@@ -1,4 +1,3 @@
-'use strict';
 const createServer = require('./lib/frameworks_drivers/webserver/server');
 
 // Start the server

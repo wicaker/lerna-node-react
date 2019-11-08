@@ -1,5 +1,2 @@
-'use strict';
 
-module.exports = (productId, { productRepository }) => {
-  return productRepository.get(productId);
-};
+module.exports = (productId, { productRepository }) => productRepository.get(productId);

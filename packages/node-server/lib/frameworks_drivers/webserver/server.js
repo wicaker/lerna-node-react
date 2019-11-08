@@ -1,8 +1,9 @@
-const express = require("express");
+const express = require('express');
+
 const app = express();
 const port = 3001;
-const routes = require("./routes");
 const bodyParser = require('body-parser');
+const routes = require('./routes');
 
 const createServer = async () => {
   // parse application/x-www-form-urlencoded
@@ -10,10 +11,10 @@ const createServer = async () => {
   // parse application/json
   app.use(bodyParser.json());
 
-  app.use(express.static("node_modules/@lerna-node-react/product/dist"));
-  
+  app.use(express.static('node_modules/@lerna-node-react/product/dist'));
+
   // Rest API
-  app.use("/api",routes);
+  app.use('/api', routes);
   app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 };
 

@@ -1,7 +1,5 @@
-'use strict';
 
 module.exports = class {
-  
   constructor(repository) {
     this.repository = repository;
   }
@@ -29,5 +27,4 @@ module.exports = class {
   find() {
     return this.repository.find();
   }
-
 };
