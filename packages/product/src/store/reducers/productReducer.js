@@ -1,10 +1,11 @@
 const initState = {
+  product:'',
   products: []
 };
 
 const productReducer = (state = initState, action) => {
   switch (action.type) {
-    case 'PRODUCT_SUCCESS':
+    case 'LIST_PRODUCTS_SUCCESS':
       return {
         ...state,
         products: action.payload

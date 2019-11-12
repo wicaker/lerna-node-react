@@ -1,6 +1,7 @@
 import React from "react";
-import { Switch, Route, Router, Link } from "react-router-dom";
+import { Switch, Route, Router, NavLink } from "react-router-dom";
 import Products from "./pages/Products";
+import ProductDetails from "./pages/ProductDetails";
 import { createMemoryHistory } from "history";
 import { acceptProducts } from "./store/actions/productAction";
 import store from "./store";
@@ -143,9 +144,10 @@ class App extends React.Component {
     }
     return (
       <Router history={history}>
-        <Link to='product'>Product</Link>
+        <NavLink to='/product'>Product</NavLink>
         <Switch>
-          <Route path="/product" component={Products} />
+          <Route exact path="/product" component={Products} />
+          <Route exact path='/product/:id' component={ProductDetails} />
         </Switch>
       </Router>
     );

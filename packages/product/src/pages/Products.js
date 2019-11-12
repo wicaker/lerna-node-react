@@ -5,14 +5,10 @@ import { connect } from "react-redux";
 import * as actionCreators from "../store/actions/productAction";
 
 class Products extends Component {
-  state = {
-    beer : []
-  }
-
   render () {
-    let AllWishlists = (<div></div>);
+    let AllProducts = (<div></div>);
     if(this.props.product.products.length > 0) {
-      AllWishlists = this.props.product.products.map(item => {
+      AllProducts = this.props.product.products.map(item => {
         return (
           <div key={item.id} className='grid-item'>
           <Product beer={item}  />
@@ -22,7 +18,7 @@ class Products extends Component {
     }
     return (
       <div className='grid-container'>
-      {AllWishlists}
+      {AllProducts}
       </div>
     )
   }
